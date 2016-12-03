@@ -18,16 +18,21 @@ RUN   cd home ; wget http://download.redis.io/releases/redis-3.0.7.tar.gz
 RUN   cd home ; tar xzf redis-3.0.7.tar.gz ; ls -la ; rm -f redis-3.0.7.tar.gz
 RUN   cd home/redis-3.0.7 ; make distclean ; make ; sudo make install
 
-# Redis 3.2.4
-RUN   cd home ; wget http://download.redis.io/releases/redis-3.2.4.tar.gz
-RUN   cd home ; tar xzf redis-3.2.4.tar.gz ; ls -la ; rm -f redis-3.2.4.tar.gz
-RUN   cd home/redis-3.2.4 ; make distclean ; make ; sudo make install
+# Redis 3.2.5
+RUN   cd home ; wget http://download.redis.io/releases/redis-3.2.5.tar.gz
+RUN   cd home ; tar xzf redis-3.2.5.tar.gz ; ls -la ; rm -f redis-3.2.5.tar.gz
+RUN   cd home/redis-3.2.5 ; make distclean ; make ; sudo make install
+
+# Redis 4.0
+RUN   cd home ; wget https://github.com/antirez/redis/archive/4.0.tar.gz
+RUN   cd home ; tar xzf 4.0.tar.gz ; ls -la ; rm -f 4.0.tar.gz; ls
+RUN   cd home/redis-4.0 ; make distclean ; make ; sudo make install
 
 ADD   ./redis_servers_start /home/redis_servers_start
 
 RUN   sudo apt-get clean
 
-EXPOSE     6381 6382 6383 6384 6385 6386 6387 6388
+EXPOSE     6381 6382 6383 6384 6385 6386 6387 6388 6389 6390
 
 ENTRYPOINT  /home/redis_servers_start
 

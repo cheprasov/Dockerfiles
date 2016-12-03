@@ -1,0 +1,23 @@
+#!/bin/sh
+
+echo 'START REDIS CLUSTERS';
+
+REDIS_IP="127.0.0.1";
+REDIS_PATH="/home/redis-3.2.5/src/"
+REDIS_PATH_SERVER=$REDIS_PATH"redis-server"
+
+REPLICAS="";
+for PORT in 7001 7002 7003 7004 7005 7006
+do
+  echo "$REDIS_PATH_SERVER --port $PORT --protected-mode no --cluster-enabled yes --cluster-config-file /home/nodes-$PORT.conf --cluster-node-timeout 5000 --appendonly yes"
+  $REDIS_PATH_SERVER --port $PORT --protected-mode no --cluster-enabled yes --cluster-config-file /home/nodes-$PORT.conf --cluster-node-timeout 5000 --appendonly yes &
+  REPLICAS=$REPLICAS" "$REDIS_IP":"$PORT
+done
+
+sleep 3
+
+sed -i -- 's/yes_or_die "Can I set the above configuration?"/ /g' $REDIS_PATH"redis-trib.rb"
+
+cd $REDIS_PATH ; ./redis-trib.rb create --replicas 1 $REPLICAS
+
+/bin/bash
