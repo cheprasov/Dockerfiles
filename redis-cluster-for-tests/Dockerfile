@@ -4,10 +4,10 @@ RUN   sudo apt-get update -y
 RUN   sudo apt-get install -y make gcc wget tcl8.5 mc
 RUN   sudo apt-get install -y ruby
 
-# Redis 3.2.5
-RUN   cd home ; wget http://download.redis.io/releases/redis-3.2.5.tar.gz
-RUN   cd home ; tar xzf redis-3.2.5.tar.gz ; ls -la ; rm -f redis-3.2.5.tar.gz
-RUN   cd home/redis-3.2.5 ; make distclean ; make ; sudo make install
+# Redis 3.2.6
+RUN   cd home ; wget http://download.redis.io/releases/redis-3.2.6.tar.gz
+RUN   cd home ; tar xzf redis-3.2.6.tar.gz ; ls -la ; rm -f redis-3.2.6.tar.gz
+RUN   cd home/redis-3.2.6 ; make distclean ; make ; sudo make install
 #RUN   cd home ; mkdir 7001 ;  mkdir 7002 ;
 #RUN   cd home ; mkdir 7003 ;  mkdir 7004 ;
 #RUN   cd home ; mkdir 7005 ;  mkdir 7006 ;

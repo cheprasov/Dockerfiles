@@ -19,9 +19,9 @@ Slave C1: 7006
 I use it for test [php-redis-client](https://github.com/cheprasov/php-redis-client)
 
 ### Versions:
-- 3.2.5
+- 3.2.6
 
 ### How to run
 ```
-sudo ./build_run
+sudo ./docker_run
 ```
