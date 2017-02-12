@@ -3,7 +3,7 @@
 echo 'START REDIS CLUSTERS';
 
 REDIS_IP="127.0.0.1";
-REDIS_PATH="/home/redis-3.2.6/src/"
+REDIS_PATH="/home/redis-3.2.8/src/"
 REDIS_PATH_SERVER=$REDIS_PATH"redis-server"
 
 REPLICAS="";

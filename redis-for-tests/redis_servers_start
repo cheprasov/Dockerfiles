@@ -11,8 +11,8 @@ echo 'START REDIS';
 /home/redis-3.0.7/src/redis-server --port 6385 &
 /home/redis-3.0.7/src/redis-server --port 6386 --requirepass "test-password-123" &
 
-/home/redis-3.2.6/src/redis-server --port 6387 --protected-mode no &
-/home/redis-3.2.6/src/redis-server --port 6388 --protected-mode no --requirepass "test-password-123" &
+/home/redis-3.2.8/src/redis-server --port 6387 --protected-mode no &
+/home/redis-3.2.8/src/redis-server --port 6388 --protected-mode no --requirepass "test-password-123" &
 
 /home/redis-4.0-rc2/src/redis-server --port 6389 --protected-mode no &
 /home/redis-4.0-rc2/src/redis-server --port 6390 --protected-mode no --requirepass "test-password-123" &

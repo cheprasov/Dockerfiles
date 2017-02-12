@@ -18,10 +18,10 @@ RUN   cd home ; wget http://download.redis.io/releases/redis-3.0.7.tar.gz
 RUN   cd home ; tar xzf redis-3.0.7.tar.gz ; ls -la ; rm -f redis-3.0.7.tar.gz
 RUN   cd home/redis-3.0.7 ; make distclean ; make ; sudo make install
 
-# Redis 3.2.6
-RUN   cd home ; wget http://download.redis.io/releases/redis-3.2.6.tar.gz
-RUN   cd home ; tar xzf redis-3.2.6.tar.gz ; ls -la ; rm -f redis-3.2.6.tar.gz
-RUN   cd home/redis-3.2.6 ; make distclean ; make ; sudo make install
+# Redis 3.2.8
+RUN   cd home ; wget http://download.redis.io/releases/redis-3.2.8.tar.gz
+RUN   cd home ; tar xzf redis-3.2.8.tar.gz ; ls -la ; rm -f redis-3.2.8.tar.gz
+RUN   cd home/redis-3.2.8 ; make distclean ; make ; sudo make install
 
 # Redis 4.0
 RUN   cd home ; wget https://github.com/antirez/redis/archive/4.0-rc2.tar.gz

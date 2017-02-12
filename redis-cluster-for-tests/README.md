@@ -19,7 +19,7 @@ Slave C1: 7006
 I use it for test [php-redis-client](https://github.com/cheprasov/php-redis-client)
 
 ### Versions:
-- 3.2.6
+- 3.2.8
 
 ### How to run
 ```
