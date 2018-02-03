@@ -12,7 +12,7 @@ I use it for test [php-redis-client](https://github.com/cheprasov/php-redis-clie
 - 2.8.24 (ports: 6383, 6384)
 - 3.0.7 (ports: 6385, 6386)
 - 3.2.8 (ports: 6387, 6388)
-- 4.0.6 (ports: 6389, 6390)
+- 4.0.8 (ports: 6389, 6390)
 
 ### How to run
 ```
