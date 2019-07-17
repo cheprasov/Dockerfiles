@@ -12,7 +12,8 @@ I use it for test [php-redis-client](https://github.com/cheprasov/php-redis-clie
 - 2.8.24 (ports: 6383, 6384)
 - 3.0.7 (ports: 6385, 6386)
 - 3.2.8 (ports: 6387, 6388)
-- 4.0.10 (ports: 6389, 6390)
+- 4.0.14 (ports: 6389, 6390)
+- 5.0.5 (ports: 6391, 6392)
 
 ### How to run
 ```
@@ -27,6 +28,8 @@ docker run -i -t --rm \
     -p 127.0.0.1:6388:6388 \
     -p 127.0.0.1:6389:6389 \
     -p 127.0.0.1:6390:6390 \
+    -p 127.0.0.1:6391:6391 \
+    -p 127.0.0.1:6392:6392 \
     cheprasov/redis-for-tests
 ```
 
